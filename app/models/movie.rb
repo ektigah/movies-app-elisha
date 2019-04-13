@@ -3,7 +3,8 @@ class Movie < ActiveRecord::Base
 	belongs_to :user
 	has_many :reviews
 
-  mount_uploader :image, ImageUploader
+  #mount_uploader :image, ImageUploader
+  has_one_attached :image
 	#has_attached_file :image, styles: { medium: "400x600#" }
   #validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 end

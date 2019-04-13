@@ -2,7 +2,7 @@
   <% @movies.each do |movie| %>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <%= link_to (image_tag movie.image.url, class: 'image'), movie %>
+        <%= link_to (image_tag movie.image, class: 'image'), movie %>
       </div>
     </div>
   <% end %>

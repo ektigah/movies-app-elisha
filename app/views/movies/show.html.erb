@@ -2,7 +2,7 @@
   <div class="panel-body">
     <div class="row">
       <div class="col-md-4">
-        <%= image_tag(@movie.image_url, :width => 400, :height => 600) if @movie.image.present? %>
+        <%= image_tag(@movie.image, :width => 400, :height => 600) if @movie.image.present? %>
         <div class="star-rating" data-score= <%= @avg_review %> ></div>
         <em><%= "#{@reviews.length} reviews" %></em>
         <div class="table-responsive">
