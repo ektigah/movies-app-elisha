@@ -60,7 +60,7 @@ class MoviesController < ApplicationController
   def destroy
     @movie.destroy
     respond_to do |format|
-      format.html { redirect_to movies_url, notice: 'Movie was successfully destroyed.' }
+      format.html { redirect_to movies_url, notice: 'Movie was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -73,4 +73,11 @@ class MoviesController < ApplicationController
     def movie_params
       params.require(:movie).permit(:title, :description, :movie_length, :director, :rating, :image)
     end
+  
+  def require_same_user
+    if current_user != @movie.user
+      flash[:danger] = "You can only edit or delete your own article"
+      redirect_to root_path
+    end
+  end
 end
