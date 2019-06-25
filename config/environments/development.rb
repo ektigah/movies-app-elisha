@@ -59,5 +59,15 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
    # Use for devise
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = {  :host => 'https://rails-ektigah465832.codeanyapp.com/'}
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :authentication => :plain,
+  :address => "smtp.mailgun.org",
+  :port => 587,
+  :domain => "sandbox41bb46f01ade42f2bf3dabcbf83dcc6c.mailgun.org",
+  :user_name => "postmaster@sandbox41bb46f01ade42f2bf3dabcbf83dcc6c.mailgun.org",
+  :password => "8559a225b53806df9e4d3e96bb5b8524-2416cf28-b8510b23"
+}
 end

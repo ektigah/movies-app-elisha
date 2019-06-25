@@ -92,4 +92,17 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  
+  config.action_mailer.default_url_options = {  :host => 'https://rails-ektigah465832.codeanyapp.com/'}
+  
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :authentication => :plain,
+  :address => ENV["adress"],
+  :port => ENV["port"],
+  :domain => ENV["domain"],
+  :user_name => ENV["user_name"],
+  :password => ENV["password"],
+}
+  
 end

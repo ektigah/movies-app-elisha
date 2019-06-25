@@ -76,4 +76,5 @@ group :production do
   gem 'pg'
 end
 gem "aws-sdk-s3", require: false
-gem 'themoviedb-api'
+#gem 'themoviedb-api'
+gem "figaro"
