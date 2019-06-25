@@ -98,11 +98,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   :authentication => :plain,
-  :address => ENV["adress"],
-  :port => ENV["port"],
-  :domain => ENV["domain"],
-  :user_name => ENV["user_name"],
-  :password => ENV["password"],
+  :address => ENV["pusher_adress"],
+  :port => ENV["pusher_port"],
+  :domain => ENV["pusher_domain"],
+  :user_name => ENV["pusher_user_name"],
+  :password => ENV["pusher_password"],
 }
   
 end
