@@ -1,5 +1,0 @@
-Pusher.adress = ENV["pusher_address"]
-Pusher.port = ENV["pusher_port"]
-Pusher.domain = ENV["pusher_domain"]
-Pusher.user_name = ENV["pusher_user_name"]
-Pusher.password = ENV["pusher_password"]
