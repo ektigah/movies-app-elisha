@@ -78,3 +78,4 @@ end
 gem "aws-sdk-s3", require: false
 #gem 'themoviedb-api'
 gem "figaro"
+gem 'dotenv-rails'
